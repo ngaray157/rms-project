@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the #{title},
+  if error 
+    p There was an error retriving this website, please come back latter
+  else
+    p Please pick from the following
+
+    ul 
+      li
+      li
+      li
