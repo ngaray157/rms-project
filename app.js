@@ -6,8 +6,21 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var dataRouter = require('./routes/data');
+var helmet = require('helmet');
 
 var app = express();
+
+app.use(helmet());
+//Set up mongoose connection
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://beckham:1234@cluster0.hecp8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

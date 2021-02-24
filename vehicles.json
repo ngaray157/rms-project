@@ -1,0 +1,114 @@
+{
+	"Vehicle Data": [
+		{
+			"Vehicle Serial #": 647,
+			"License #": 25310,
+			"State": "NV",
+			"Year": 94730,
+			"Make": "Jeep",
+			"Model": "Explorer",
+			"Color": "#5f727d",
+			"Value": 40933
+		},
+		{
+			"Vehicle Serial #": 77087,
+			"License #": 37843,
+			"State": "MD",
+			"Year": 32822,
+			"Make": "Nissan",
+			"Model": "PT Cruiser",
+			"Color": "#350271",
+			"Value": 59331
+		},
+		{
+			"Vehicle Serial #": 26194,
+			"License #": 7826,
+			"State": "VA",
+			"Year": 44008,
+			"Make": "Honda",
+			"Model": "Countach",
+			"Color": "#093901",
+			"Value": 27126
+		},
+		{
+			"Vehicle Serial #": 88468,
+			"License #": 84692,
+			"State": "NM",
+			"Year": 64397,
+			"Make": "BMW",
+			"Model": "2",
+			"Color": "#790b55",
+			"Value": 94780
+		},
+		{
+			"Vehicle Serial #": 44689,
+			"License #": 15033,
+			"State": "DE",
+			"Year": 66240,
+			"Make": "Mercedes Benz",
+			"Model": "Malibu",
+			"Color": "#62131b",
+			"Value": 89312
+		},
+		{
+			"Vehicle Serial #": 99046,
+			"License #": 70802,
+			"State": "CT",
+			"Year": 7889,
+			"Make": "Mercedes Benz",
+			"Model": "Land Cruiser",
+			"Color": "#7f413e",
+			"Value": 97109
+		},
+		{
+			"Vehicle Serial #": 59280,
+			"License #": 19829,
+			"State": "HI",
+			"Year": 90707,
+			"Make": "Maserati",
+			"Model": "Element",
+			"Color": "#233d0e",
+			"Value": 92280
+		},
+		{
+			"Vehicle Serial #": 44815,
+			"License #": 34494,
+			"State": "MA",
+			"Year": 96356,
+			"Make": "Mercedes Benz",
+			"Model": "F-150",
+			"Color": "#366903",
+			"Value": 6265
+		},
+		{
+			"Vehicle Serial #": 24638,
+			"License #": 67004,
+			"State": "NJ",
+			"Year": 1549,
+			"Make": "Chrysler",
+			"Model": "Impala",
+			"Color": "#197429",
+			"Value": 18917
+		},
+		{
+			"Vehicle Serial #": 31860,
+			"License #": 87066,
+			"State": "NC",
+			"Year": 42941,
+			"Make": "Mercedes Benz",
+			"Model": "911",
+			"Color": "#69037f",
+			"Value": 71717
+		},
+		{
+			"Vehicle Serial #": 12696,
+			"License #": 44778,
+			"State": "WV",
+			"Year": 9980,
+			"Make": "BMW",
+			"Model": "Corvette",
+			"Color": "#645c77",
+			"Value": 47740
+		}
+	]
+}
