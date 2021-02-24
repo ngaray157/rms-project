@@ -68,12 +68,6 @@ function generateIncidents(){
     return{"Incident Data": incidents}
 }
 
-let dataObjV = generateVehicles();
-let dataObjI = generateIncidents();
-fs.writeFileSync('data.json', JSON.stringify(dataObjV, null, '\t'));
-fs.writeFileSync('data.json', JSON.stringify(dataObjI, null, '\t'));
-
-
 function generatePeople() {
     // People array
     let people = [];
@@ -125,6 +119,10 @@ function generatePeople() {
     return ("People Data", people);
 };
 
+let dataObjV = generateVehicles();
+let dataObjI = generateIncidents();
 let dataObjP = generatePeople();
 
 fs.writeFileSync('data.json', JSON.stringify(dataObjP, null, '\t'));
+fs.writeFileSync('data.json', JSON.stringify(dataObjV, null, '\t'));
+fs.writeFileSync('data.json', JSON.stringify(dataObjI, null, '\t'));
