@@ -1,7 +1,5 @@
 const faker = require('faker');
 const fs = require('fs');
-var async = require('async');
-var vehicles = require('./models/vehicles');
 
 function generateVehicles(){
     let vehicles = [];
@@ -11,8 +9,8 @@ function generateVehicles(){
         let licenseNum = faker.random.alphaNumeric();
         let state = faker.address.stateAbbr();
         let year = faker.random.number();
-        //make
-        //model
+        let make = faker.vehicle.manufacturer();
+        let model = faker.vehicle.model();
         let color = faker.internet.color();
         let value = faker.random.number();
 
@@ -21,6 +19,8 @@ function generateVehicles(){
             "License #": licenseNum,
             "State": state,
             "Year": year,
+            "Make": make,
+            "Model": model,
             "Color": color,
             "Value": value
         });
@@ -29,5 +29,46 @@ function generateVehicles(){
     return {"Vehicle Data": vehicles}
 }
 
-let dataObj = generateVehicles();
+function generateIncidents(){
+    let incidents = [];
+
+    for (var id=0; id<=10; id++){
+        let irNumber = faker.random.number();
+        let occurDates = faker.date.between();
+        let occurTimes = faker.time.recent();
+        let incidentType = faker.random.word();
+        let location = faker.address.streetAddress();
+        let locationName = faker.company.companyName();
+        let narrative = faker.lorem.sentences();
+        let officerName = faker.name.findName();
+        let officerSerial = faker.random.number();
+        let reportDate = faker.date.recent();
+        let reportTime = faker.time.recent();
+        let value = faker.random.number();
+        let suppInt = faker.lorem.word();
+
+        incidents.push({
+            "Incident Report #": irNumber,
+            "Occurence Dates": occurDates,
+            "Occurence Times": occurTimes,
+            "Incident Type": incidentType,
+            "Location": location,
+            "Location Name": locationName,
+            "Narrative": narrative,
+            "Officer Name": officerName,
+            "Officer Serial #": officerSerial,
+            "Report Date": reportDate,
+            "Report Time": reportTime,
+            "Value": value,
+            "Supplemental Incident": suppInt
+        })
+    }
+
+    return{"Incident Data": incidents}
+}
+
+let dataObjV = generateVehicles();
+let dataObjI = generateIncidents();
+fs.writeFileSync('data.json', JSON.stringify(dataObjV, null, '\t'));
+fs.writeFileSync('data.json', JSON.stringify(dataObjI, null, '\t'));
 
