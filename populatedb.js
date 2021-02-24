@@ -1,13 +1,12 @@
 const faker = require('faker');
 const fs = require('fs');
-// People population
 
 function generateVehicles(){
     let vehicles = [];
 
     for (var id=0; id<=10; id++){
         let vehicleSerial = faker.random.number();
-        let licenseNum = faker.random.alphaNumeric();
+        let licenseNum = faker.random.number();
         let state = faker.address.stateAbbr();
         let year = faker.random.number();
         let make = faker.vehicle.manufacturer();
@@ -72,7 +71,7 @@ function generatePeople() {
     // People array
     let people = [];
     for (var id = 0; id <= 10; id++) {
-        let codeLetter = faker.random.alpha();
+        let codeLetter = faker.random.word();
         let lastName = faker.name.lastName();
         let firstName = faker.name.firstName();
         let middleName = faker.name.middleName();
@@ -89,7 +88,7 @@ function generatePeople() {
         let age = faker.random.number();
         let scars = faker.random.word();
         let tattoos = faker.random.word();
-        let address = faker.address.streetAdress();
+        let address = faker.address.streetAddress();
         let phoneNum = faker.phone.phoneNumber();
         let gangAffil = faker.random.word();
 

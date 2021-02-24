@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var peopleSchema = new Schema(
     {
-        code: { type: String, required: true },
+        code: { type: String, required: true, maxlength: 1 },
         lastName: { type: String, required: true },
         firstName: { type: String, required: true },
         middleName: { type: String, required: true },
