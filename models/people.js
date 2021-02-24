@@ -35,27 +35,3 @@ peopleSchema
 
 //Export model
 module.exports = mongoose.model('incident', incidentSchema);
-
-// Faker JS
-const faker = require('faker');
-
-//Need code
-let lastName = faker.name.lastName();
-let firstName = faker.name.firstName();
-let middleName = faker.name.middleName();
-//SSN
-//DL#
-//Exp date
-// Race
-let sex = faker.gender.sex();
-// Height
-// Weight
-// Eyes
-// Hair
-let birthDate = faker.past.birthDate();
-// Age
-let scars = faker.random.word.scars();
-// Tattoos
-let address = faker.streetAddress.streetAdress();
-let phoneNum = faker.phone.phoneNumber();
-// Gang affiliation
