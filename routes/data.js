@@ -9,7 +9,7 @@ var vehicle_controller = require('../controllers/vehicleController');
 /// INCIDENTS ROUTES ///
 
 // GET data home page
-router.get('/', "works but view is not done");
+router.get('/', incident_controller.index);
 
 // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
 router.get('/incident/create', incident_controller.incident_create_get);
@@ -59,7 +59,7 @@ router.post('/people/:id/update', people_controller.people_update_post);
 router.get('/people/:id', people_controller.people_detail);
 
 // GET request for list of all Authors.
-router.get('/peoples', people_controller.people_list);
+router.get('/people', people_controller.people_list);
 
 /// VEHICLES ROUTES ///
 
