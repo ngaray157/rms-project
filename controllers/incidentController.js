@@ -8,13 +8,15 @@ exports.index = function(req, res, next) {
 
 // Display list of all incidents.
 exports.incident_list = function(req, res, next) {
-    Book.find({}, 'title incident')
-    .populate('incident')
-    .exec(function (err, list_incidents) {
-        if (err) { return next(err); }
-        //Successful, so render
-        res.render('incidents_list', { title: 'Incidents List', incidents_list: list_incidents });
-    });
+        Incidents.find({title: 'incident'})
+        .populate('incident')
+        .exec(function (err, list_incidents) {
+            if (err) {
+                return next(err);
+            }
+            //Successful, so render
+            res.render('incidents_list', { title: 'Incidents List', incidents_list: list_incidents });
+        });
 };
 
 // Display detail page for a specific book.
