@@ -15,7 +15,7 @@ exports.people_create_get = function (req, res) {
 
 // Handle person create on POST.
 exports.people_create_post = function (req, res) {
-    res.send('NOT IMPLEMENTED: people create POST');
+    res.send('NOT IMPLEMENTED: people create POS');
 };
 
 // Display person delete form on GET.
