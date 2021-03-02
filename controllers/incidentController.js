@@ -1,16 +1,24 @@
 var Incidents = require('../models/incidents');
+const { body,validationResult } = require('express-validator');
+var async = require('async');
 
-exports.index = function(req, res) {
+exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
 };
 
 // Display list of all incidents.
-exports.incident_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Incident list');
+exports.incident_list = function(req, res, next) {
+    Book.find({}, 'title incident')
+    .populate('incident')
+    .exec(function (err, list_incidents) {
+        if (err) { return next(err); }
+        //Successful, so render
+        res.render('incidents_list', { title: 'Incidents List', incidents_list: list_incidents });
+    });
 };
 
 // Display detail page for a specific book.
-exports.incident_detail = function(req, res) {
+exports.incident_detail = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Incident detail: ' + req.params.id);
 };
 
