@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Incident</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="createIncident.css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h2>Here you can file an incident report!</h2>
+    <navbar id="verticalNav">
+        <ul class="bg-secondary border border-warning"">
+            <li class=" nav-item">
+            <a class="nav-link text-warning" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Incidents</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="#">People</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Vehicles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Create an incident report</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-lin text-warning" href="#">Create a people report</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Create a vehicle report</a>
+            </li>
+        </ul>
+        </nav>
+        <form>
+            <div class="mb-3">
+                <label for="irNum" class="form-label">IR#</label>
+                <input type="number" class="form-control" id="irNum">
+                <!-- <div id="emailHelp" class="form-text">Enter the incident report number.</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="occurenceDate" class="form-label">Occurence Date</label>
+                <input type="text" class="form-control" id="occurenceDate">
+                <!-- <div id="emailHelp" class="form-text">The date of the incident</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="occurenceTime" class="form-label">Occurence Time</label>
+                <input type="text" class="form-control" id="occurenceTime">
+                <!-- <div id="emailHelp" class="form-text">The time of the incident</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="incidentType" class="form-label">Incident Type</label>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="incidentType"
+                        data-toggle="dropdown">Select
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="incidentType">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">=</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location">
+            </div>
+            <div class="mb-3">
+                <label for="locationName" class="form-label">Location Name</label>
+                <input type="text" class="form-control" id="locationName">
+            </div>
+            <!-- <label for="narrative" class="form-label">Narrative</label> -->
+            <textarea name="narBox" id="narrative" cols="150" rows="5"
+                placeholder="Write a basic narrative here."></textarea>
+            <div class="mb-3">
+                <label for="officerName" class="form-label">Officer Name</label>
+                <input type="text" class="form-control" id="officerName">
+            </div>
+            <div class="mb-3">
+                <label for="officerSerialNum" class="form-label">Officer Serial #</label>
+                <input type="text" class="form-control" id="officerSerialNum">
+            </div>
+            <div class="mb-3">
+                <label for="reportDate" class="form-label">Report Date</label>
+                <input type="number" class="form-control" id="reportDate">
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="text" class="form-control" id="time">
+            </div>
+            <div class="mb-3">
+                <label for="value" class="form-label">Value Stolen/Damaged</label>
+                <input type="text" class="form-control" id="value">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
