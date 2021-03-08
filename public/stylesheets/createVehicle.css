@@ -1,56 +1,35 @@
 /* Basic page styles */
 
 body {
-    margin: 0;
-    padding: 0;
+    background-color: #F7931D;
 }
 
-.form h2 {
+h3 {
     text-align: center;
-    margin: 0;
+
 }
 
-/* Navigation styles */
+/* Form styles */
 
- ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+div.form-group {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 20px;
+}
+
+input.submitButton {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+textarea.form-control {
+    resize: none;
     background-color: #04133E;
-}
-
-li a {
-    display: block;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    text-align: center
-}
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #F7931D;
     color: white;
 }
 
-#active {
-    background-color: #F7931D;
-    color: white;
-}
-
-/* Flexbox layout */
-
-.verticalNav {
-    flex-direction: column;
-    /* justify-content: space-evenly; */
-    float: left;
-    width: 25%;
-}
-
-.form {
-    flex-direction: column;
-    /* justify-content: space-evenly; */
-    height: 100%;
-    width: 75%;
+.submitButton {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 20px;
 }

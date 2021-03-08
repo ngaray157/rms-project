@@ -3,26 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Form</title>
-    <link rel="stylesheet" href="/public/stylesheets/createVehicle.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create a Vehicle Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="/public/stylesheets/createVehicle.css" rel="stylesheet">
+    <script src="app.js"></script>
 </head>
 
 <body>
-    <div class="verticalNav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="incidents.html">Incident reports</a></li>
-            <li><a href="people.html">People reports</a></li>
-            <li><a href="vehicles.html">Vehicle reports</a></li>
-            <li><a href="createIncident.html">Create an incident report</a></li>
-            <li><a href="create_person.html">Create a person report</a></li>
-            <li><a href="createVehicle.html" id="active">Create a vehicle report</a></li>
-        </ul>
-    </div>
-    <div class="form">
-        <h2>Begin filing a vehicle report!</h2>
-    </div>
+    <h3>File a vehicle report here!</h3>
+    <form class="vehicleForm">
+        <div class="form-group">
+            <label class="form-labels" for="vehicleSerial">Vehicle Serial #</label>
+            <textarea class="form-control" id="vehicleSerial" rows="1"></textarea>
+        </div class="form-group">
+        <div class="form-group">
+            <label class="form-labels" for="licenseNum">License #</label>
+            <textarea class="form-control" id="licenseNum" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="state">State</label>
+            <textarea class="form-control" id="state" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="year">Year</label>
+            <textarea class="form-control" id="year" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="carMake">Make</label>
+            <textarea class="form-control" id="carMake" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="carModel">Model</label>
+            <textarea class="form-control" id="carModel" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="carValue">Value</label>
+            <textarea class="form-control" id="carValue" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-labels" for="carColor">Color</label>
+            <textarea class="form-control" id="carColor" rows="1"></textarea>
+        </div>
+
+        <div class="submitButton">
+            <button>Submit</button>
+        </div>
+
+    </form>
 </body>
 
 </html>
