@@ -1,0 +1,82 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Create Incident
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
+  link(href='/public/stylesheets/style.css' rel='stylesheet')
+  script(src='app.js')
+h2 Here you can file an incident report!
+navbar#verticalNav
+  ul.bg-secondary.border.border-warning
+    li.nav-item
+      a.nav-link.text-warning(aria-current='page' href='#') Home
+    li.nav-item
+      a.nav-link.text-warning(href='#') Incidents
+    li.nav-item
+      a.nav-link.text-warning(href='#') People
+    li.nav-item
+      a.nav-link.text-warning(href='#') Vehicles
+    li.nav-item
+      a.nav-link.text-warning(href='#') Create an incident report
+    li.nav-item
+      a.nav-lin.text-warning(href='#') Create a people report
+    li.nav-item
+      a.nav-link.text-warning(href='#') Create a vehicle report
+  form
+    .mb-3
+      label.form-label(for='irNum') IR#
+      input#irNum.form-control(type='number')
+      // <div id="emailHelp" class="form-text">Enter the incident report number.</div>
+    .mb-3
+      label.form-label(for='occurenceDate') Occurence Date
+      input#occurenceDate.form-control(type='text')
+      // <div id="emailHelp" class="form-text">The date of the incident</div>
+    .mb-3
+      label.form-label(for='occurenceTime') Occurence Time
+      input#occurenceTime.form-control(type='text')
+      // <div id="emailHelp" class="form-text">The time of the incident</div>
+    .mb-3
+      label.form-label(for='incidentType') Incident Type
+      .dropdown
+        button#incidentType.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown')
+          | Select
+          span.caret
+        ul.dropdown-menu(role='menu' aria-labelledby='incidentType')
+          li(role='presentation')
+            a(role='menuitem' tabindex='-1' href='#') =
+          li(role='presentation')
+            a(role='menuitem' tabindex='-1' href='#')
+          li(role='presentation')
+            a(role='menuitem' tabindex='-1' href='#')
+          li.divider(role='presentation')
+          li(role='presentation')
+            a(role='menuitem' tabindex='-1' href='#')
+    .mb-3
+      label.form-label(for='location') Location
+      input#location.form-control(type='text')
+    .mb-3
+      label.form-label(for='locationName') Location Name
+      input#locationName.form-control(type='text')
+    // <label for="narrative" class="form-label">Narrative</label>
+    textarea#narrative(name='narBox' cols='150' rows='5' placeholder='Write a basic narrative here.')
+    .mb-3
+      label.form-label(for='officerName') Officer Name
+      input#officerName.form-control(type='text')
+    .mb-3
+      label.form-label(for='officerSerialNum') Officer Serial #
+      input#officerSerialNum.form-control(type='text')
+    .mb-3
+      label.form-label(for='reportDate') Report Date
+      input#reportDate.form-control(type='number')
+    .mb-3
+      label.form-label(for='time') Time
+      input#time.form-control(type='text')
+    .mb-3
+      label.form-label(for='value') Value Stolen/Damaged
+      input#value.form-control(type='text')
+    button.btn.btn-primary(type='submit') Submit
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js' integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==' crossorigin='anonymous')
