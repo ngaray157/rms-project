@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var incidentSchema = new Schema(
+var IncidentSchema = new Schema(
     {
+        incidentName: { type: String, required: true },
         irNumber: { type: String, required: true },
         occurenceDates: { type: String, required: true },
         occurenceTimes: { type: String, required: true },
@@ -20,12 +21,25 @@ var incidentSchema = new Schema(
     }
 );
 
+// Virtual for incident name
+IncidentSchema.virtual('name').get(function () {
+    return this.incidentName;
+});
+
 // Virtual for incidents' URL
-incidentSchema
-    .virtual('url')
-    .get(function () {
-        return '/catalog/incidents/' + this._id;
-    });
+IncidentSchema.virtual('url').get(function () {
+    return '/data/incidents/' + this._id;
+});
+
+// Virtual for incident report number
+IncidentSchema.virtual('reportNum').get(function () {
+    return this.irNumber;
+});
+
+// Virtual for incident occurence dates
+IncidentSchema.virtual('occurence').get(function () {
+    return DateTime.fromJSDate(this.occurenceDates).toISODate(); //format 'YYYY-MM-DD'
+});
 
 //Export model
-module.exports = mongoose.model('incident', incidentSchema);
+module.exports = mongoose.model('Incident', IncidentSchema);

@@ -11,80 +11,80 @@ var vehicle_controller = require('../controllers/vehicleController');
 // GET data home page
 router.get('/', incident_controller.index);
 
-// GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
+// GET request for creating an Incident. NOTE This must come before routes that display Incident (uses id).
 router.get('/incident/create', incident_controller.incident_create_get);
 
-// POST request for creating Book.
+// POST request for creating Incident.
 router.post('/incident/create', incident_controller.incident_create_post);
 
-// GET request to delete Book.
+// GET request to delete Incident.
 router.get('/incident/:id/delete', incident_controller.incident_delete_get);
 
-// POST request to delete Book.
+// POST request to delete Incident.
 router.post('/incident/:id/delete', incident_controller.incident_delete_post);
 
-// GET request to update Book.
+// GET request to update Incident.
 router.get('/incident/:id/update', incident_controller.incident_update_get);
 
-// POST request to update Book.
+// POST request to update Incident.
 router.post('/incident/:id/update', incident_controller.incident_update_post);
 
-// GET request for one Book.
+// GET request for one Incident.
 router.get('/incident/:id', incident_controller.incident_detail);
 
-// GET request for list of all Book items.
+// GET request for list of all Incidents.
 router.get('/incidents', incident_controller.incident_list);
 
 /// PEOPLE ROUTES ///
 
-// GET request for creating Author. NOTE This must come before route for id (i.e. display author).
+// GET request for creating People. NOTE This must come before route for id (i.e. display people).
 router.get('/people/create', people_controller.people_create_get);
 
-// POST request for creating Author.
+// POST request for creating People.
 router.post('/people/create', people_controller.people_create_post);
 
-// GET request to delete Author.
+// GET request to delete People.
 router.get('/people/:id/delete', people_controller.people_delete_get);
 
-// POST request to delete Author.
+// POST request to delete People.
 router.post('/people/:id/delete', people_controller.people_delete_post);
 
-// GET request to update Author.
+// GET request to update People.
 router.get('/people/:id/update', people_controller.people_update_get);
 
-// POST request to update Author.
+// POST request to update People.
 router.post('/people/:id/update', people_controller.people_update_post);
 
-// GET request for one Author.
+// GET request for one People.
 router.get('/people/:id', people_controller.people_detail);
 
-// GET request for list of all Authors.
+// GET request for list of all People.
 router.get('/people', people_controller.people_list);
 
 /// VEHICLES ROUTES ///
 
-// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+// GET request for creating a Vehicle. NOTE This must come before route that displays Vehicle (uses id).
 router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
 
-//POST request for creating Genre.
+//POST request for creating Vehicle.
 router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
 
-// GET request to delete Genre.
+// GET request to delete Vehicle.
 router.get('/vehicle/:id/delete', vehicle_controller.vehicle_delete_get);
 
-// POST request to delete Genre.
+// POST request to delete Vehicle.
 router.post('/vehicle/:id/delete', vehicle_controller.vehicle_delete_post);
 
-// GET request to update Genre.
+// GET request to update Vehicle.
 router.get('/vehicle/:id/update', vehicle_controller.vehicle_update_get);
 
-// POST request to update Genre.
+// POST request to update Vehicle.
 router.post('/vehicle/:id/update', vehicle_controller.vehicle_update_post);
 
-// GET request for one Genre.
+// GET request for one Vehicle.
 router.get('/vehicle/:id', vehicle_controller.vehicle_detail);
 
-// GET request for list of all Genre.
+// GET request for list of all Vehicle.
 router.get('/vehicles', vehicle_controller.vehicle_list);
 
 module.exports = router;
